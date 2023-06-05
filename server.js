@@ -3,8 +3,10 @@ const app = express();
 require("dotenv").config();
 const connectDB = require("./config/db");
 const apiRoutes = require("./routes/api");
+const cors = require("cors");
 
 connectDB();
+cors();
 
 app.use(express.urlencoded({extendend: true}));
 app.use(express.json());

@@ -1,10 +1,8 @@
 const express = require("express");
-const app = express();
 const router = express.Router();
 const apiController = require("../controllers/api");
 
-
-
-app.get("/", apiController.getNBA);
+router.get("/NBA", apiController.getNBA);
+router.post("/updateNBA", apiController.updateNBA);
 
 module.exports = router
